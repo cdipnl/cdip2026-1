@@ -1,0 +1,16 @@
+import Hero from "@/components/Hero";
+import Tour from "@/components/Tour";
+import Spotify from "@/components/Spotify";
+import { getEvents } from "@/lib/ticketmaster";
+
+export default async function Page() {
+  const events = await getEvents();
+
+  return (
+    <main className="bg-black min-h-screen">
+      <Hero />
+      <Spotify />
+      <Tour events={events} />
+    </main>
+  );
+}
