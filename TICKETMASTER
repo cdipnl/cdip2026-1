@@ -1,0 +1,7 @@
+export async function getEvents() {
+  const res = await fetch(
+    `https://app.ticketmaster.com/discovery/v2/events.json?keyword=Celine+Dion&apikey=${process.env.TM_KEY}`
+  );
+  const data = await res.json();
+  return data._embedded?.events || [];
+}
