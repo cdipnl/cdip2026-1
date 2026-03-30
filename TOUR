@@ -1,0 +1,14 @@
+export default function Tour({ events }: any) {
+  return (
+    <section className="p-10 text-white">
+      <h2 className="text-3xl mb-4">Tour Dates</h2>
+
+      {events.map((e: any) => (
+        <div key={e.id} className="flex justify-between mb-2">
+          <span>{e.name}</span>
+          <a href={e.url} target="_blank">Tickets</a>
+        </div>
+      ))}
+    </section>
+  );
+}
