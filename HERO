@@ -1,0 +1,15 @@
+export default function Hero() {
+  return (
+    <section className="h-screen relative flex items-center justify-center text-white">
+      <video autoPlay muted loop className="absolute w-full h-full object-cover">
+        <source src="/video/celine.mp4" />
+      </video>
+
+      <div className="absolute inset-0 bg-black/60" />
+
+      <h1 className="relative text-6xl font-serif">
+        Céline Dion
+      </h1>
+    </section>
+  );
+}
